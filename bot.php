@@ -49,7 +49,7 @@ function sendmessage($type, $user, $content)
     global $api_key;
     $apiendpoint = ucfirst($type);
 
-    if ($type == "audio" || $type == "video" || $type == "document") {
+    if ($type == 'photo' || $type == "audio" || $type == "video" || $type == "document") {
         $mimetype = mime_content_type($content);
         $content = new CurlFile($content, $mimetype);
     } elseif ($type == "message") {

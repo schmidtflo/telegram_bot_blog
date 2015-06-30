@@ -121,5 +121,18 @@ Insert a randomly generated key here.
 
 The messages your follower should get. `/command` and `@user` is automatically linked by telegram. To break the line, use `\n`
 
+
+## Sending photos or documents
+
+When you want to send pictures, documents and so on, you have to change the code.
+
+But sending is already implemented:
+
+`sendmessage('message_type', 'user_id', $filepath);`
+
+As an example, to send `picture.png` from the same folder to somebody:
+
+`sendmessage('photo', $message["message"]["from"]["id"], 'picture.png');` 
+
 ## Credits
 This bot is created by [@schmidtflo](https://telegram.me/schmidtflo).
